@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: pink;
+        }
+        .Main{
+            padding-top: 20%; 
+           
+        }
+        input{
+            font-size: 30px;
+            width: 200px;
+            border: 2px solid gray;
+            border-radius: 20px;
+            background: transparent;
+            padding-left: 10px;
+        }
+        button{
+            font-size: 40px;
+            background: black;
+            color: white;
+            border: 2px solid gray;
+            border-radius: 20px;
+        }
+        .contant{
+            padding-top: 5%;
+            display: none;
+            font-size: 30px;
+            font-family: 'Pacifico';
+            color: black;
+            text-shadow: 0 0 9px gray,
+                        0 0 7px #fff,
+                        0 0 7px #fff;
+        }
+        .heart{
+            animation: zoom 0.2s linear;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <script>
+        function Show() {
+            var name = document.getElementById('name').value;
+            if(document.getElementById('name').value == ""){
+                alert('Please type your name!');
+            }
+            else{
+                document.getElementById('addname').innerHTML=name;
+                document.getElementById('m1').style.display="none";
+                document.getElementById('c1').style.display="block";
+            }  
+        } 
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Main" id="m1">
+        <center>
+            <h1>Enter your name!</h1>
+            <br>
+            <br>
+            <input type="text" placeholder="Enter Name" id="name">
+            <br>
+            <br>
+            <button onclick="Show()">click</button>
+        </center>
+    </div>
+
+    <div class="contant" id="c1">
+        <center>
+            <h2>I</h2>
+            <h1 class="heart">&#128156</h1>
+            <h2>YOU</h2>
+            <h1 id="addname"></h1>
+            <h2>SO SO MUCH</h2>
+            <h2> MWAH <3</h2>
+        </center>
+    </div>
+</body>
+</html>
